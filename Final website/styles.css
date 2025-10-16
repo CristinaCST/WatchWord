@@ -501,6 +501,8 @@ section {
     padding: var(--spacing-lg);
     border: 1px solid var(--color-border);
     transition: all var(--transition-medium);
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -519,6 +521,7 @@ section {
     color: var(--color-text-secondary);
     line-height: 1.7;
     font-size: 0.95rem;
+    flex-grow: 1;
 }
 
 .project-image {
@@ -537,6 +540,54 @@ section {
 
 .project-card:hover .project-image .placeholder-svg {
     transform: scale(1.05);
+}
+
+.project-links {
+    display: flex;
+    gap: var(--spacing-xs);
+    margin-top: auto;
+    padding-top: var(--spacing-sm);
+}
+
+.btn-project {
+    flex: 1;
+    display: inline-block;
+    padding: 0.65rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 2px solid transparent;
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-medium);
+    border-radius: 2px;
+}
+
+.btn-trailer {
+    background-color: var(--color-accent);
+    color: var(--color-text-primary);
+    border-color: var(--color-accent);
+}
+
+.btn-trailer:hover {
+    background-color: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 123, 167, 0.4);
+}
+
+.btn-imdb {
+    background-color: transparent;
+    color: var(--color-text-secondary);
+    border-color: var(--color-border);
+}
+
+.btn-imdb:hover {
+    background-color: var(--color-surface-light);
+    color: var(--color-text-primary);
+    border-color: var(--color-text-secondary);
+    transform: translateY(-2px);
 }
 
 /* ========================================
@@ -807,6 +858,14 @@ section {
 
     section {
         padding: var(--spacing-lg) 0;
+    }
+
+    .project-links {
+        flex-direction: column;
+    }
+
+    .btn-project {
+        width: 100%;
     }
 }
 
