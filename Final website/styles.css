@@ -448,6 +448,24 @@ section {
     line-height: 1.8;
 }
 
+.team-image {
+    margin-bottom: var(--spacing-sm);
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: var(--color-background);
+}
+
+.team-image .placeholder-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform var(--transition-medium);
+}
+
+.team-member:hover .team-image .placeholder-svg {
+    transform: scale(1.05);
+}
+
 /* ========================================
    PROJECTS SECTION
    ======================================== */
@@ -501,6 +519,24 @@ section {
     color: var(--color-text-secondary);
     line-height: 1.7;
     font-size: 0.95rem;
+}
+
+.project-image {
+    margin-bottom: var(--spacing-sm);
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: var(--color-surface);
+}
+
+.project-image .placeholder-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform var(--transition-medium);
+}
+
+.project-card:hover .project-image .placeholder-svg {
+    transform: scale(1.05);
 }
 
 /* ========================================
