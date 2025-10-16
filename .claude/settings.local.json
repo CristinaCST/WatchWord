@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(textutil -convert txt:*)",
+      "Bash(cp:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
