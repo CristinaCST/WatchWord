@@ -523,6 +523,9 @@ section {
     color: var(--color-text-primary);
     font-size: 1.25rem;
     margin-bottom: var(--spacing-sm);
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
 }
 
 .project-card p {
@@ -537,8 +540,13 @@ section {
     overflow: hidden;
     border-radius: 4px;
     background-color: var(--color-surface);
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.project-image img,
 .project-image .placeholder-svg {
     width: 100%;
     height: auto;
@@ -546,6 +554,7 @@ section {
     transition: transform var(--transition-medium);
 }
 
+.project-card:hover .project-image img,
 .project-card:hover .project-image .placeholder-svg {
     transform: scale(1.05);
 }
