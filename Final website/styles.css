@@ -506,7 +506,7 @@ section {
 
 .project-card {
     background-color: var(--color-background);
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md);
     border: 1px solid var(--color-border);
     transition: all var(--transition-medium);
     display: flex;
@@ -540,7 +540,7 @@ section {
     overflow: hidden;
     border-radius: 4px;
     background-color: var(--color-surface);
-    height: 300px;
+    height: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
