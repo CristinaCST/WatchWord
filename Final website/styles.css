@@ -971,6 +971,92 @@ section {
     }
 }
 
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Set initial state for animated elements */
+.project-card,
+.project-list-item,
+.team-member,
+.about-block,
+.wildveld-block,
+.section-title,
+.category-title,
+.intro-text {
+    opacity: 0;
+}
+
+/* Apply animations when elements come into view */
+.project-card.animate-in {
+    animation: slideUp 0.6s ease-out forwards;
+}
+
+.project-list-item.animate-in {
+    animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.team-member.animate-in {
+    animation: scaleIn 0.6s ease-out forwards;
+}
+
+.about-block.animate-in {
+    animation: slideInRight 0.6s ease-out forwards;
+}
+
+.wildveld-block.animate-in {
+    animation: slideUp 0.6s ease-out forwards;
+}
+
+.section-title.animate-in,
+.category-title.animate-in {
+    animation: slideUp 0.8s ease-out forwards;
+}
+
+.intro-text.animate-in {
+    animation: slideUp 0.8s ease-out forwards;
+}
+
 .fade-in {
     animation: fadeIn 1s ease-out;
 }

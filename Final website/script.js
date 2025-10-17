@@ -92,27 +92,64 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ========================================
-    // INTERSECTION OBSERVER FOR FADE-IN ANIMATIONS
+    // INTERSECTION OBSERVER FOR SCROLL ANIMATIONS
     // ========================================
     const observerOptions = {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: '0px 0px -100px 0px'
     };
 
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
+                entry.target.classList.add('animate-in');
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // Observe elements
-    const animateElements = document.querySelectorAll('.project-card, .team-member, .about-block, .wildveld-block');
-    animateElements.forEach(el => {
+    // Observe different types of elements with staggered delays
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach((el, index) => {
+        el.style.animationDelay = `${index * 0.1}s`;
         observer.observe(el);
     });
+
+    const projectListItems = document.querySelectorAll('.project-list-item');
+    projectListItems.forEach((el, index) => {
+        el.style.animationDelay = `${index * 0.15}s`;
+        observer.observe(el);
+    });
+
+    const teamMembers = document.querySelectorAll('.team-member');
+    teamMembers.forEach((el, index) => {
+        el.style.animationDelay = `${index * 0.2}s`;
+        observer.observe(el);
+    });
+
+    const aboutBlocks = document.querySelectorAll('.about-block');
+    aboutBlocks.forEach((el, index) => {
+        el.style.animationDelay = `${index * 0.2}s`;
+        observer.observe(el);
+    });
+
+    const wildveldBlocks = document.querySelectorAll('.wildveld-block');
+    wildveldBlocks.forEach((el, index) => {
+        el.style.animationDelay = `${index * 0.2}s`;
+        observer.observe(el);
+    });
+
+    // Animate section titles
+    const sectionTitles = document.querySelectorAll('.section-title, .category-title');
+    sectionTitles.forEach(el => {
+        observer.observe(el);
+    });
+
+    // Animate intro text
+    const introText = document.querySelector('.intro-text');
+    if (introText) {
+        observer.observe(introText);
+    }
 
     // ========================================
     // ACTIVE NAV LINK HIGHLIGHTING
