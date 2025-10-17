@@ -448,6 +448,22 @@ section {
     line-height: 1.8;
 }
 
+.team-credentials {
+    list-style: disc;
+    padding-left: var(--spacing-md);
+    margin: 0;
+}
+
+.team-credentials li {
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-xs);
+}
+
+.team-credentials li:last-child {
+    margin-bottom: 0;
+}
+
 .team-image {
     margin-bottom: var(--spacing-sm);
     overflow: hidden;
