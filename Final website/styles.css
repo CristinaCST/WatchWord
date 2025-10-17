@@ -517,7 +517,30 @@ section {
     color: var(--color-text-secondary);
     line-height: 1.8;
     font-size: 1rem;
-    margin-bottom: 0;
+    margin-bottom: var(--spacing-sm);
+}
+
+.btn-sizzle {
+    display: inline-block;
+    padding: 0.65rem 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background-color: var(--color-accent);
+    color: var(--color-text-primary);
+    border: 2px solid var(--color-accent);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all var(--transition-medium);
+    margin-top: var(--spacing-xs);
+}
+
+.btn-sizzle:hover {
+    background-color: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 123, 167, 0.4);
 }
 
 .projects-category {
