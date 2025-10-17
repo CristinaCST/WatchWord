@@ -108,7 +108,7 @@ section {
     background-color: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    padding: var(--spacing-sm) 0;
+    padding: var(--spacing-md) 0;
     border-bottom: 1px solid var(--color-border);
 }
 
@@ -124,7 +124,7 @@ section {
 }
 
 .logo img {
-    height: 70px;
+    height: 80px;
     width: auto;
 }
 
@@ -536,6 +536,10 @@ section {
     letter-spacing: 1px;
 }
 
+.projects-category#wildveld .category-title {
+    text-align: center;
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -676,8 +680,9 @@ section {
 }
 
 .wildveld-content {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .wildveld-intro {
@@ -699,6 +704,7 @@ section {
     background-color: var(--color-surface);
     padding: var(--spacing-lg);
     border-left: 3px solid var(--color-accent);
+    text-align: left;
 }
 
 .wildveld-block h3 {
@@ -716,6 +722,7 @@ section {
     padding: var(--spacing-lg);
     margin-bottom: var(--spacing-lg);
     border: 1px solid var(--color-border);
+    text-align: left;
 }
 
 .wildveld-history p {
@@ -955,7 +962,7 @@ section {
    ======================================== */
 
 section {
-    scroll-margin-top: 80px;
+    scroll-margin-top: 100px;
 }
 
 /* ========================================

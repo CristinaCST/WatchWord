@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const target = document.querySelector(href);
             if (target) {
-                const offsetTop = target.offsetTop - 80; // Account for fixed navbar
+                const offsetTop = target.offsetTop - 100; // Account for fixed navbar
 
                 window.scrollTo({
                     top: offsetTop,
