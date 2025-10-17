@@ -482,6 +482,44 @@ section {
     background-color: var(--color-surface);
 }
 
+/* Projects List Style (for In Development) */
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+}
+
+.project-list-item {
+    background-color: var(--color-background);
+    padding: var(--spacing-lg);
+    border-left: 4px solid var(--color-accent);
+    transition: all var(--transition-medium);
+    position: relative;
+}
+
+.project-list-item:hover {
+    transform: translateX(10px);
+    border-left-width: 6px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-list-item h4 {
+    color: var(--color-accent);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    min-height: auto;
+    display: block;
+}
+
+.project-list-item p {
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
 .projects-category {
     margin-bottom: var(--spacing-xxl);
 }
@@ -871,6 +909,10 @@ section {
     }
 
     .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-list {
         grid-template-columns: 1fr;
     }
 
