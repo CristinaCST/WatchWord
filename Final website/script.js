@@ -194,4 +194,64 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // ========================================
+    // VIDEO MODAL FUNCTIONALITY
+    // ========================================
+    const videoModal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+    const modalVideoSource = document.getElementById('modalVideoSource');
+    const modalCloseBtn = document.querySelector('.video-modal-close');
+    const sizzleButtons = document.querySelectorAll('.btn-sizzle[data-video]');
+
+    // Open modal when sizzle button is clicked
+    sizzleButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const videoSrc = this.getAttribute('data-video');
+
+            if (videoSrc) {
+                modalVideoSource.setAttribute('src', videoSrc);
+                modalVideo.load();
+                videoModal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+
+                // Ensure video plays (some browsers may block autoplay)
+                modalVideo.play().catch(err => {
+                    console.log('Autoplay prevented:', err);
+                });
+            }
+        });
+    });
+
+    // Close modal when close button is clicked
+    if (modalCloseBtn) {
+        modalCloseBtn.addEventListener('click', function() {
+            closeVideoModal();
+        });
+    }
+
+    // Close modal when clicking outside the video
+    if (videoModal) {
+        videoModal.addEventListener('click', function(e) {
+            if (e.target === videoModal) {
+                closeVideoModal();
+            }
+        });
+    }
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && videoModal.classList.contains('active')) {
+            closeVideoModal();
+        }
+    });
+
+    // Function to close modal and stop video
+    function closeVideoModal() {
+        videoModal.classList.remove('active');
+        modalVideo.pause();
+        modalVideo.currentTime = 0;
+        document.body.style.overflow = ''; // Restore scrolling
+    }
 });

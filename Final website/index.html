@@ -32,6 +32,9 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="hero.mp4" type="video/mp4">
+        </video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="hero-title">WATCHWORD</h1>
@@ -117,7 +120,9 @@
 
             <!-- WildVeld TV -->
             <div class="projects-category" id="wildveld">
-                <h3 class="category-title">WildVeld TV</h3>
+                <div class="wildveld-logo-container">
+                    <img src="wildveld_logo.avif" alt="WildVeld TV" class="wildveld-logo">
+                </div>
                 <p class="wildveld-subtitle">A New Frontier in African Storytelling</p>
 
                 <div class="wildveld-content">
@@ -141,7 +146,7 @@
                         <p>With this unique, unfettered access to the land and its inhabitants, WildVeld TV will be a platform dedicated to African content, focusing on wildlife conservation, outdoor adventures, and cultural storytelling. The platform aims to inspire global audiences, educate viewers on conservation efforts, and provide a space for African filmmakers to showcase their work.</p>
                     </div>
 
-                    <a href="#contact" class="btn btn-primary">Discover WildVeld TV</a>
+                    <a href="https://wildveld.com/pages/wildveld-tv" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Discover WildVeld TV</a>
                 </div>
             </div>
 
@@ -152,7 +157,7 @@
                     <div class="project-list-item">
                         <h4>Longshot</h4>
                         <p>Watchword owns exclusive rights to Brian Young's improbable rise — from broke nightclub bouncer to the promoter behind Mike Tyson vs. Lennox Lewis, the highest-grossing heavyweight title fight in boxing history. A raw, unfiltered story about ambition, chaos, and redemption.</p>
-                        <a href="#" class="btn-sizzle">View Sizzle</a>
+                        <a href="#" class="btn-sizzle" data-video="longshot_sizzle.mp4">View Sizzle</a>
                     </div>
                     <div class="project-list-item">
                         <h4>First Five</h4>
@@ -162,7 +167,7 @@
                     <div class="project-list-item">
                         <h4>Paycheck Game</h4>
                         <p>A behind-the-scenes David-vs-Goliath story about underfunded college football teams taking on powerhouse programs for a life-changing payday — and their moment in the spotlight.</p>
-                        <a href="#" class="btn-sizzle">View Sizzle</a>
+                        <a href="#" class="btn-sizzle" data-video="paycheck_sizzle.mp4">View Sizzle</a>
                     </div>
                     <div class="project-list-item">
                         <h4>NIL</h4>
@@ -291,6 +296,17 @@
             <p class="footer-tagline">Stories that move the world.</p>
         </div>
     </footer>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-content">
+            <button class="video-modal-close">&times;</button>
+            <video id="modalVideo" class="modal-video-player" controls autoplay>
+                <source id="modalVideoSource" src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
