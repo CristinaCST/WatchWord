@@ -202,10 +202,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalVideo = document.getElementById('modalVideo');
     const modalVideoSource = document.getElementById('modalVideoSource');
     const modalCloseBtn = document.querySelector('.video-modal-close');
-    const sizzleButtons = document.querySelectorAll('.btn-sizzle[data-video]');
+    const videoButtons = document.querySelectorAll('.btn-sizzle[data-video], .btn-trailer[data-video]');
 
-    // Open modal when sizzle button is clicked
-    sizzleButtons.forEach(button => {
+    // Open modal when video button is clicked
+    videoButtons.forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             const videoSrc = this.getAttribute('data-video');
