@@ -279,7 +279,7 @@ section {
 
 .btn {
     display: inline-block;
-    padding: 1rem 2rem;
+    padding: 1rem 2.5rem;
     font-size: 0.95rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -287,7 +287,8 @@ section {
     border: 2px solid transparent;
     cursor: pointer;
     transition: all var(--transition-medium);
-    border-radius: 2px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary {
@@ -299,8 +300,8 @@ section {
 .btn-primary:hover {
     background-color: var(--color-accent-hover);
     border-color: var(--color-accent-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(74, 123, 167, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(74, 123, 167, 0.5);
 }
 
 .btn-secondary {
@@ -312,7 +313,8 @@ section {
 .btn-secondary:hover {
     background-color: var(--color-text-primary);
     color: var(--color-background);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
 }
 
 /* ========================================
@@ -558,7 +560,7 @@ section {
 
 .btn-sizzle {
     display: inline-block;
-    padding: 0.65rem 1.5rem;
+    padding: 0.75rem 1.75rem;
     font-size: 0.85rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -566,17 +568,18 @@ section {
     background-color: var(--color-accent);
     color: var(--color-text-primary);
     border: 2px solid var(--color-accent);
-    border-radius: 2px;
+    border-radius: 50px;
     cursor: pointer;
     transition: all var(--transition-medium);
     margin-top: var(--spacing-xs);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .btn-sizzle:hover {
     background-color: var(--color-accent-hover);
     border-color: var(--color-accent-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(74, 123, 167, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(74, 123, 167, 0.5);
 }
 
 .projects-category {
@@ -683,7 +686,7 @@ section {
 .btn-project {
     flex: 1;
     display: inline-block;
-    padding: 0.65rem 1rem;
+    padding: 0.75rem 1.25rem;
     font-size: 0.85rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -692,7 +695,8 @@ section {
     text-align: center;
     cursor: pointer;
     transition: all var(--transition-medium);
-    border-radius: 2px;
+    border-radius: 50px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .btn-trailer {
@@ -704,8 +708,8 @@ section {
 .btn-trailer:hover {
     background-color: var(--color-accent-hover);
     border-color: var(--color-accent-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(74, 123, 167, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(74, 123, 167, 0.5);
 }
 
 .btn-imdb {
@@ -718,7 +722,8 @@ section {
     background-color: var(--color-surface-light);
     color: var(--color-text-primary);
     border-color: var(--color-text-secondary);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.15);
 }
 
 /* ========================================
