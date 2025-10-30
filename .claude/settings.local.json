@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(textutil -convert txt:*)",
-      "Bash(cp:*)"
+      "Bash(cp:*)",
+      "Bash(git push:*)",
+      "Bash(git stash pop:*)"
     ],
     "deny": [],
     "ask": []

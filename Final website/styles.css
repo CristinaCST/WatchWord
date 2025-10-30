@@ -726,6 +726,33 @@ section {
     box-shadow: 0 6px 18px rgba(255, 255, 255, 0.15);
 }
 
+/* Disabled button styles */
+.btn-project:disabled,
+.btn-sizzle:disabled,
+button[disabled] {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.btn-project:disabled:hover,
+.btn-sizzle:disabled:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-text-primary);
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.btn-imdb:disabled:hover {
+    background-color: transparent;
+    color: var(--color-text-secondary);
+    border-color: var(--color-border);
+    transform: none !important;
+    box-shadow: none !important;
+}
+
 /* ========================================
    WILDVELD TV SECTION
    ======================================== */
