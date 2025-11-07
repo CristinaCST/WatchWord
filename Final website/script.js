@@ -70,28 +70,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ========================================
-    // FORM SUBMISSION
-    // ========================================
-    const contactForm = document.querySelector('.contact-form');
-
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
-
-            // Here you would typically send the data to a server
-            // For now, we'll just show an alert
-            alert('Thank you for your message! We will get back to you soon.');
-
-            // Reset form
-            contactForm.reset();
-        });
-    }
-
-    // ========================================
     // INTERSECTION OBSERVER FOR SCROLL ANIMATIONS
     // ========================================
     const observerOptions = {
@@ -178,22 +156,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', highlightNavLink);
     highlightNavLink(); // Call on load
-
-    // ========================================
-    // PARALLAX EFFECT ON HERO
-    // ========================================
-    const hero = document.querySelector('.hero');
-
-    if (hero) {
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const parallaxSpeed = 0.5;
-
-            if (scrolled < window.innerHeight) {
-                hero.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
-            }
-        });
-    }
 
     // ========================================
     // VIDEO MODAL FUNCTIONALITY
