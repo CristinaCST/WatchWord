@@ -964,52 +964,21 @@ button[disabled] {
    CONTACT FORM
    ======================================== */
 
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.form-group {
-    margin-bottom: var(--spacing-md);
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: var(--spacing-xs);
-    color: var(--color-text-primary);
-    font-weight: 600;
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 0.75rem 1rem;
+.contact-form-container {
+    max-width: 800px;
+    margin: var(--spacing-xl) auto 0;
+    padding: var(--spacing-lg);
     background-color: var(--color-background);
+    border-radius: 8px;
     border: 1px solid var(--color-border);
-    color: var(--color-text-primary);
-    font-family: var(--font-primary);
-    font-size: 1rem;
-    transition: all var(--transition-fast);
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--color-accent);
-    box-shadow: 0 0 0 3px rgba(74, 123, 167, 0.1);
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 150px;
-}
-
-.contact-form .btn {
+.google-form {
     width: 100%;
-    margin-top: var(--spacing-sm);
+    height: 959px;
+    border: none;
+    border-radius: 4px;
+    display: block;
 }
 
 /* ========================================
